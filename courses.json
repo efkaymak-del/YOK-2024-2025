@@ -1,1 +1,261 @@
+{
+  "meta": {
+    "title": "2024-2025 Akademik Yılı YÖK Denetlemesi",
+    "instructor": "Prof. Dr. Erol Kaymak",
+    "institution": "Doğu Akdeniz Üniversitesi",
+    "faculty": "İşletme ve Ekonomi Fakültesi / Siyaset Bilimi ve Uluslararası İlişkiler Bölümü",
+    "document_date": "25/03/2026",
+    "document_number": "31522",
+    "generated": "2026-04-08"
+  },
+  "semesters": [
+    {
+      "id": "fall-2024",
+      "name_tr": "Güz 2024-25",
+      "name_en": "Fall 2024-25",
+      "courses": [
+        {
+          "code": "PSIR 101",
+          "name": "Introduction to Global Politics",
+          "group": "03",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "co_instructors": ["Prof. Dr. Ahmet Sözen", "Doç. Dr. Umut Bozkurt"],
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "students": 33,
+          "assessment": {
+            "midterm": 30,
+            "final": 40,
+            "lecture_participation": 10,
+            "tutorial_participation": 10,
+            "tutorial_assignments": 10
+          },
+          "documents": {
+            "syllabus": { "file": "Fall-2024/PSIR-101/PSIR101_Autumn_2024-25_Syllabus.pdf" },
+            "attendance": { "file": "Fall-2024/PSIR-101/Attendance_PSIR101_03_Fall2024.xlsx", "sessions": 23 },
+            "midterm_exam": { "files": ["Fall-2024/PSIR-101/Midterm_GroupA.docx", "Fall-2024/PSIR-101/Midterm_GroupB.docx"] },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "files": ["Fall-2024/PSIR-101/Final_GroupA.docx", "Fall-2024/PSIR-101/Final_GroupB.docx"] },
+            "final_answer_key": { "embedded": true },
+            "resit_exam": { "file": "Fall-2024/PSIR-101/Resit_Exam.docx" },
+            "resit_answer_key": { "embedded": true },
+            "grades": { "files": ["Fall-2024/PSIR-101/Grades_PSIR101-03.xlsx", "Fall-2024/PSIR-101/Grades_Optical.xlsx"] },
+            "letter_grades": { "file": "Fall-2024/PSIR-101/Letter_Grades_Fall2024.pdf" },
+            "resit_letter_grades": { "file": "Fall-2024/PSIR-101/Resit_Letter_Grades.pdf" },
+            "exam_attendance": { "file": "Fall-2024/PSIR-101/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "PSIR 201",
+          "name": "Theory and Practice of International Relations",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "ta": "Vera Petrovna Liubchak",
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "students": 21,
+          "assessment": {
+            "midterm": 30,
+            "final": 40,
+            "participation": 15,
+            "assignments": 15
+          },
+          "documents": {
+            "syllabus": { "file": "Fall-2024/PSIR-201/PSIR201_Course_Outline_Fall2024.docx" },
+            "attendance": { "file": "Fall-2024/PSIR-201/Attendance_PSIR201_01_Fall2024.xlsx" },
+            "midterm_exam": { "file": "Fall-2024/PSIR-201/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "midterm_rubric": { "file": "Fall-2024/PSIR-201/Midterm_Rubric.pdf" },
+            "final_exam": { "file": "Fall-2024/PSIR-201/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "resit_exam": { "files": ["Fall-2024/PSIR-201/Resit_Exam.docx", "Fall-2024/PSIR-201/Resit_Exam.pdf"] },
+            "resit_answer_key": { "embedded": true },
+            "grades": { "files": ["Fall-2024/PSIR-201/Grades_Fall2024.xlsx", "Fall-2024/PSIR-201/Grades_PSIR201-01.xlsx"] },
+            "letter_grades": { "file": "Fall-2024/PSIR-201/Letter_Grades_Fall2024.pdf" },
+            "resit_letter_grades": { "file": "Fall-2024/PSIR-201/Resit_Letter_Grades.pdf" },
+            "exam_attendance": { "file": "Fall-2024/PSIR-201/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" },
+            "supplementary": {
+              "textbook": "Fall-2024/PSIR-201/International-Relations-Theory-E-IR.pdf",
+              "sample_assignment": "Fall-2024/PSIR-201/Sample_Assignment_Rahmanova.docx"
+            }
+          }
+        },
+        {
+          "code": "PSIR 307",
+          "name": "History of Political Thought",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "documents": {
+            "syllabus": { "file": "Fall-2024/PSIR-307/Syllabus.pdf" },
+            "attendance": { "file": "Fall-2024/PSIR-307/Attendance_PSIR307_01_Fall2024.xlsx" },
+            "midterm_exam": { "file": "Fall-2024/PSIR-307/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Fall-2024/PSIR-307/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Fall-2024/PSIR-307/Grades_Fall2024.xlsx" },
+            "letter_grades": { "file": "Fall-2024/PSIR-307/Letter_Grades_Fall2024.pdf" },
+            "exam_attendance": { "file": "Fall-2024/PSIR-307/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "INTL 511",
+          "name": "International Relations Theory",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Yüksek Lisans (MA)",
+          "credits": 3,
+          "ects": 6,
+          "assessment": {
+            "reaction_papers": 20,
+            "midterm_exam": 20,
+            "final_exam": 20,
+            "research_essay": 20,
+            "participation": 20
+          },
+          "documents": {
+            "syllabus": { "file": "Fall-2024/INTL-511/INTL511_Syllabus_Fall2024.docx" },
+            "attendance": { "file": "Fall-2024/INTL-511/Attendance_INTL511_01_Fall2024.xlsx" },
+            "midterm_exam": { "file": "Fall-2024/INTL-511/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Fall-2024/INTL-511/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Fall-2024/INTL-511/Grades_Fall2024.xlsx" },
+            "letter_grades": { "file": "Fall-2024/INTL-511/Letter_Grades_Fall2024.pdf" },
+            "exam_attendance": { "file": "Fall-2024/INTL-511/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "INTL 601",
+          "name": "Advanced International Relations Theory",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Doktora (PhD)",
+          "credits": 3,
+          "ects": 6,
+          "documents": {
+            "syllabus": { "file": "Fall-2024/INTL-601/INTL601_Syllabus_Fall2024.docx" },
+            "attendance": { "file": "Fall-2024/INTL-601/Attendance_INTL601_01_Fall2024.xlsx" },
+            "midterm_exam": { "file": "Fall-2024/INTL-601/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Fall-2024/INTL-601/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Fall-2024/INTL-601/Grades_Fall2024.xlsx" },
+            "letter_grades": { "file": "Fall-2024/INTL-601/Letter_Grades_Fall2024.pdf" },
+            "exam_attendance": { "file": "Fall-2024/INTL-601/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "spring-2025",
+      "name_tr": "Bahar 2024-25",
+      "name_en": "Spring 2024-25",
+      "courses": [
+        {
+          "code": "PSIR 101",
+          "name": "Introduction to Global Politics",
+          "group": "02",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "co_instructors": ["Doç. Dr. Umut Bozkurt", "Dr. Öğr. Üyesi Aylin Gürzel Aka"],
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "students": 38,
+          "assessment": {
+            "midterm": 35,
+            "final": 40,
+            "lecture_participation": 5,
+            "tutorial_participation": 10,
+            "tutorial_assignments": 10
+          },
+          "documents": {
+            "syllabus": { "file": "Spring-2025/PSIR-101/PSIR101_Spring_2024-25_Syllabus.docx" },
+            "attendance": { "file": "Spring-2025/PSIR-101/Attendance_PSIR101_02_Spring2025.xlsx", "sessions": 30 },
+            "midterm_exam": { "file": "Spring-2025/PSIR-101/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Spring-2025/PSIR-101/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "files": ["Spring-2025/PSIR-101/Grades_PSIR101-02.xls", "Spring-2025/PSIR-101/Grades_Combined.xls", "Spring-2025/PSIR-101/Grades_All_Sections.xlsx"] },
+            "letter_grades": { "file": "Spring-2025/PSIR-101/Letter_Grades_Spring2025.pdf" },
+            "exam_attendance": { "file": "Spring-2025/PSIR-101/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "PSIR 172",
+          "name": "Applied Skills in Political Science",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "documents": {
+            "syllabus": { "file": "Spring-2025/PSIR-172/Syllabus.pdf" },
+            "attendance": { "file": "Spring-2025/PSIR-172/Attendance_PSIR172_01_Spring2025.xlsx" },
+            "midterm_exam": { "file": "Spring-2025/PSIR-172/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Spring-2025/PSIR-172/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Spring-2025/PSIR-172/Grades_Spring2025.xlsx" },
+            "letter_grades": { "file": "Spring-2025/PSIR-172/Letter_Grades_Spring2025.pdf" },
+            "exam_attendance": { "file": "Spring-2025/PSIR-172/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "PSIR 220",
+          "name": "Research Design",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "documents": {
+            "syllabus": { "file": "Spring-2025/PSIR-220/Syllabus.pdf" },
+            "attendance": { "file": "Spring-2025/PSIR-220/Attendance_PSIR220_01_Spring2025.xlsx" },
+            "midterm_exam": { "file": "Spring-2025/PSIR-220/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Spring-2025/PSIR-220/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Spring-2025/PSIR-220/Grades_Spring2025.xlsx" },
+            "letter_grades": { "file": "Spring-2025/PSIR-220/Letter_Grades_Spring2025.pdf" },
+            "exam_attendance": { "file": "Spring-2025/PSIR-220/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        },
+        {
+          "code": "PSIR 308",
+          "name": "Contemporary Political Thought",
+          "group": "01",
+          "instructor": "Prof. Dr. Erol Kaymak",
+          "level": "Lisans",
+          "credits": 3,
+          "ects": 6,
+          "documents": {
+            "syllabus": { "file": "Spring-2025/PSIR-308/Syllabus.pdf" },
+            "attendance": { "file": "Spring-2025/PSIR-308/Attendance_PSIR308_01_Spring2025.xlsx" },
+            "midterm_exam": { "file": "Spring-2025/PSIR-308/Midterm_Exam.docx" },
+            "midterm_answer_key": { "embedded": true },
+            "final_exam": { "file": "Spring-2025/PSIR-308/Final_Exam.docx" },
+            "final_answer_key": { "embedded": true },
+            "grades": { "file": "Spring-2025/PSIR-308/Grades_Spring2025.xlsx" },
+            "letter_grades": { "file": "Spring-2025/PSIR-308/Letter_Grades_Spring2025.pdf" },
+            "exam_attendance": { "file": "Spring-2025/PSIR-308/Exam_Attendance_Records.pdf" },
+            "student_samples": { "note": "Basılı kopya — denetim dosyasında mevcut" }
+          }
+        }
+      ]
+    }
+  ]
+}
 
