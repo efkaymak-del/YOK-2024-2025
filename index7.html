@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024-2025 Akademik Yılı YÖK Denetlemesi — Prof. Dr. Erol Kaymak</title>
+<style>
+  :root {
+    --navy: #1a2332;
+    --blue: #2c5282;
+    --light-blue: #ebf4ff;
+    --green: #276749;
+    --light-green: #f0fff4;
+    --gray: #718096;
+    --light-gray: #f7fafc;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --red: #c53030;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--light-gray); color: #2d3748; line-height: 1.6; }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+    background: var(--navy); color: var(--white); overflow-y: auto;
+    padding: 20px 0; z-index: 100;
+  }
+  .sidebar h2 { font-size: 14px; padding: 0 20px; margin-bottom: 5px; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px; }
+  .sidebar .logo { padding: 20px; border-bottom: 1px solid #2d3748; margin-bottom: 15px; }
+  .sidebar .logo h1 { font-size: 16px; line-height: 1.4; }
+  .sidebar .logo p { font-size: 11px; color: #a0aec0; margin-top: 4px; }
+  .sidebar a {
+    display: block; padding: 8px 20px 8px 30px; color: #cbd5e0;
+    text-decoration: none; font-size: 13px; transition: all 0.2s;
+  }
+  .sidebar a:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+  .sidebar a.active { background: var(--blue); color: var(--white); border-left: 3px solid #63b3ed; }
+  .sidebar .semester-label { padding: 15px 20px 5px; font-size: 12px; color: #63b3ed; font-weight: 700; text-transform: uppercase; }
+
+  /* MAIN */
+  .main { margin-left: 280px; padding: 30px 40px; max-width: 1100px; }
+  .header { background: var(--blue); color: var(--white); padding: 30px; border-radius: 8px; margin-bottom: 30px; }
+  .header h1 { font-size: 22px; margin-bottom: 5px; }
+  .header p { font-size: 13px; opacity: 0.85; }
+
+  /* CHECKLIST TABLE */
+  .checklist-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .checklist-table th { background: var(--navy); color: var(--white); padding: 10px 12px; font-size: 11px; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
+  .checklist-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 13px; text-align: center; }
+  .checklist-table td:first-child { text-align: left; font-weight: 600; }
+  .checklist-table tr:hover { background: var(--light-blue); }
+  .check { color: var(--green); font-weight: 700; }
+  .physical { color: var(--blue); font-weight: 600; }
+
+  /* COURSE SECTIONS */
+  .course-section { background: var(--white); border-radius: 8px; padding: 30px; margin-bottom: 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .course-section h2 { color: var(--navy); font-size: 18px; border-bottom: 2px solid var(--blue); padding-bottom: 8px; margin-bottom: 20px; }
+  .course-section h3 { color: var(--blue); font-size: 15px; margin: 20px 0 10px; }
+  .course-section h4 { color: #4a5568; font-size: 13px; margin: 15px 0 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 30px; margin-bottom: 20px; font-size: 13px; }
+  .info-grid dt { color: var(--gray); }
+  .info-grid dd { font-weight: 600; }
+
+  .doc-list { margin: 10px 0 20px 0; }
+  .doc-item { display: flex; align-items: center; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--light-gray); }
+  .doc-item .icon { width: 20px; color: var(--green); font-weight: 700; margin-right: 8px; }
+  .doc-item .filename { color: var(--gray); font-family: 'Consolas', monospace; font-size: 11px; margin-left: auto; }
+  
+  /* THIS MAKES THE LINKS CLICKABLE AND BLUE */
+  .doc-item .filename a { color: var(--blue); font-weight: bold; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid transparent; transition: 0.2s; }
+  .doc-item .filename a:hover { border-bottom: 1px solid var(--blue); }
+
+  .answer-key { background: var(--light-green); border: 1px solid #c6f6d5; border-radius: 6px; padding: 15px 20px; margin: 10px 0 20px; font-size: 13px; }
+  .answer-key h4 { color: var(--green); margin: 0 0 8px; font-size: 13px; }
+  .answer-key table { width: 100%; border-collapse: collapse; }
+  .answer-key td { padding: 3px 8px; border-bottom: 1px solid #c6f6d5; font-size: 12px; }
+  .answer-key td:first-child { font-weight: 600; width: 50px; }
+
+  .essay-guide { background: #fffff0; border: 1px solid #fefcbf; border-radius: 6px; padding: 15px 20px; margin: 10px 0 20px; font-size: 13px; }
+  .essay-guide h4 { color: #975a16; margin: 0 0 8px; font-size: 13px; }
+
+  .physical-note { background: var(--light-blue); border: 1px solid #bee3f8; border-radius: 6px; padding: 10px 15px; font-size: 12px; color: var(--blue); margin: 10px 0; }
+
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .course-section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="logo">
+    <h1>YÖK Denetlemesi<br>2024-2025</h1>
+    <p>Prof. Dr. Erol Kaymak<br>Doğu Akdeniz Üniversitesi</p>
+  </div>
+  <a href="#checklist">Ana Kontrol Tablosu</a>
+
+  <div class="semester-label">Güz 2024-25</div>
+  <a href="#fall-psir101">PSIR 101 — Grup 03</a>
+  <a href="#fall-psir201">PSIR 201 — Grup 01</a>
+  <a href="#fall-psir307">PSIR 307 — Grup 01</a>
+  <a href="#fall-intl511">INTL 511 — Grup 01</a>
+  <a href="#fall-intl601">INTL 601 — Grup 01</a>
+
+  <div class="semester-label">Bahar 2024-25</div>
+  <a href="#spring-psir101">PSIR 101 — Grup 02</a>
+  <a href="#spring-psir172">PSIR 172 — Grup 01</a>
+  <a href="#spring-psir220">PSIR 220 — Grup 01</a>
+  <a href="#spring-psir308">PSIR 308 — Grup 01</a>
+
+  <div class="semester-label">Ek Bilgiler</div>
+  <a href="#physical">Fiziksel Dosyalar</a>
+</nav>
+
+<div class="main">
+
+<div class="header">
+  <h1>2024-2025 Akademik Yılı YÖK Denetlemesi</h1>
+  <p>Prof. Dr. Erol Kaymak — Siyaset Bilimi ve Uluslararası İlişkiler Bölümü — Doğu Akdeniz Üniversitesi</p>
+  <p>Evrak Tarih ve Sayı: 25/03/2026 — 31522</p>
+</div>
+
+<div class="course-section" id="checklist">
+<h2>Ana Kontrol Tablosu</h2>
+<table class="checklist-table">
+<thead>
+<tr>
+  <th>Ders</th><th>Dönem</th><th>Ders Tasarımı</th><th>Devam Çizelgesi</th><th>Sınav Kâğıtları</th><th>Cevap Anahtarı</th><th>Sınav Yoklama</th><th>Not Çizelgesi</th><th>Harf Notları</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>PSIR 101 (Gr.03)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 201 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 307 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>INTL 511 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>INTL 601 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 101 (Gr.02)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 172 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 220 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 308 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td></tr>
+</tbody>
+</table>
+<p style="font-size:12px; color:var(--gray); margin-top:8px;">✓ = Dijital kopya mevcut &nbsp;&nbsp; Dosyada = Basılı kopya denetim dosyasında mevcut</p>
+</div>
+
+<div class="course-section" id="fall-psir101">
+<h2>PSIR 101 — Introduction to Global Politics (Güz 2024-25, Grup 03)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Diğer Öğretim Üyeleri:</dt><dd>Prof. Dr. Ahmet Sözen, Doç. Dr. Umut Bozkurt</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+  <dt>Öğrenci Sayısı:</dt><dd>33</dd>
+  <dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Ders Katılım %10, Ödev %10, Tartışma %10</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı (Syllabus) <span class="filename">PSIR101_Autumn_2024-25_Syllabus.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Devam Takip Çizelgesi <span class="filename">Attendance_PSIR101_03_Fall2024.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı — Grup A <span class="filename">Midterm_GroupA.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı — Grup B <span class="filename">Midterm_GroupB.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı — Grup A <span class="filename">Final_GroupA.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı — Grup B <span class="filename">Final_GroupB.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Sınavı <span class="filename">Resit_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_PSIR101-03.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Optik Notlar <span class="filename">Grades_Optical.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Harf Notları <span class="filename">Letter_Grades_Fall2024.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Harf Notları <span class="filename">Resit_Letter_Grades.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Yoklama <span class="filename">Resit_Attendance.pdf</span></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı (Grup A)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>6</td><td>c</td><td>11</td><td>b</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>7</td><td>b</td><td>12</td><td>c</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>c</td><td>8</td><td>c</td><td>13</td><td>b</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>a</td><td>9</td><td>b</td><td>14</td><td>b</td><td>19</td><td>c</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>c</td><td>15</td><td>a</td><td>20</td><td>a→1,b→2,c→3,d→4,e→5</td></tr>
+</table>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı (Grup B)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>Doğru</td><td>6</td><td>a</td><td>11</td><td>b</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>c</td><td>7</td><td>b</td><td>12</td><td>c</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>Yanlış</td><td>8</td><td>c</td><td>13</td><td>b</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>b</td><td>9</td><td>b</td><td>14</td><td>b</td><td>19</td><td>c</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>c</td><td>15</td><td>a</td><td>20</td><td>Yanlış</td></tr>
+</table>
+</div>
+</div>
+
+<div class="course-section" id="fall-psir201">
+<h2>PSIR 201 — Theory and Practice of International Relations (Güz 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Araştırma Görevlisi:</dt><dd>Vera Petrovna Liubchak</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+  <dt>Öğrenci Sayısı:</dt><dd>21</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">PSIR201_Course_Outline_Fall2024.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Devam Takip Çizelgesi <span class="filename">Attendance_PSIR201_01_Fall2024.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Rubric <span class="filename">Midterm_Rubric.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Sınavı <span class="filename">Resit_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme PDF <span class="filename">Resit_Exam.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_Fall2024.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Sınıf Notları <span class="filename">Grades_PSIR201-01.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Harf Notları <span class="filename">Letter_Grades_Fall2024.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Harf Notları <span class="filename">Resit_Letter_Grades.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Bütünleme Yoklama <span class="filename">Resit_Attendance.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Ders Kitabı <span class="filename">International-Relations-Theory-E-IR.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Örnek Ödev <span class="filename">Sample_Assignment_Rahmanova.docx</span></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Çoktan Seçmeli</h4>
+<table>
+<tr><td>1</td><td>c</td><td>4</td><td>c</td><td>7</td><td>c</td><td>10</td><td>b</td><td>13</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>5</td><td>b</td><td>8</td><td>b</td><td>11</td><td>b</td><td>14</td><td>b</td></tr>
+<tr><td>3</td><td>b</td><td>6</td><td>c</td><td>9</td><td>b</td><td>12</td><td>b</td><td>15</td><td>a</td></tr>
+</table>
+</div>
+</div>
+
+<div class="course-section" id="fall-psir307">
+<h2>PSIR 307 — History of Political Thought (Güz 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+</dl>
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">Syllabus.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Devam Takip Çizelgesi <span class="filename">Attendance_PSIR307_01_Fall2024.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_Fall2024.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Harf Notları <span class="filename">Letter_Grades_Fall2024.pdf</span></div>
+</div>
+</div>
+
+<div class="course-section" id="fall-intl511">
+<h2>INTL 511 — International Relations Theory (Güz 2024-25, Yüksek Lisans)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+</dl>
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">INTL511_Syllabus_Fall2024.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_Fall2024.xlsx</span></div>
+</div>
+</div>
+
+<div class="course-section" id="fall-intl601">
+<h2>INTL 601 — Advanced International Relations Theory (Güz 2024-25, Doktora)</h2>
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">INTL601_Syllabus_Fall2024.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_Fall2024.xlsx</span></div>
+</div>
+</div>
+
+<div class="course-section" id="spring-psir101">
+<h2>PSIR 101 — Introduction to Global Politics (Bahar 2024-25, Grup 02)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+  <dt>Öğrenci Sayısı:</dt><dd>38</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">PSIR101_Spring_2024-25_Syllabus.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Devam Takip Çizelgesi <span class="filename">Attendance_PSIR101_02_Spring2025.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_PSIR101-02.xls</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Birleşik Notlar 1 <span class="filename">Grades_Combined.xls</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Birleşik Notlar 2 <span class="filename">Grades_All_Sections.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Harf Notları <span class="filename">Letter_Grades_Spring2025.pdf</span></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>c</td><td>6</td><td>b</td><td>11</td><td>c</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>7</td><td>c</td><td>12</td><td>b</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>b</td><td>8</td><td>b</td><td>13</td><td>c</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>c</td><td>9</td><td>c</td><td>14</td><td>b</td><td>19</td><td>b</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>b</td><td>15</td><td>b</td><td>20</td><td>c</td></tr>
+</table>
+</div>
+</div>
+
+<div class="course-section" id="spring-psir172">
+<h2>PSIR 172 — Applied Skills in Political Science (Bahar 2024-25, Grup 01)</h2>
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">Syllabus.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+</div>
+</div>
+
+<div class="course-section" id="spring-psir220">
+<h2>PSIR 220 — Research Design (Bahar 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+  <dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+  <dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+  <dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Araştırma Önerisi %20, Katılım %10</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">PSIR 220 Syllabus.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Devam Takip Çizelgesi <span class="filename">Attendance_PSIR220_01_Spring2025.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">INTL 511- Midterm for International Relations Theory.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">PSIR 220 Final.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <span class="filename">Grades_Spring2025.xlsx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Harf Notları <span class="filename">Letter_Grades_Spring2025.pdf</span></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (10 soru × 2 puan = 20 puan)</h4>
+<table>
+<tr><td>1</td><td>c</td><td>3</td><td>b</td><td>5</td><td>a</td><td>7</td><td>c</td><td>9</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>4</td><td>a</td><td>6</td><td>c</td><td>8</td><td>b</td><td>10</td><td>c</td></tr>
+</table>
+</div>
+</div>
+
+<div class="course-section" id="spring-psir308">
+<h2>PSIR 308 — Contemporary Political Thought (Bahar 2024-25, Grup 01)</h2>
+<h3>Dosyalar</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <span class="filename">Syllabus.pdf</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span class="filename">Midterm_Exam.docx</span></div>
+  <div class="doc-item"><span class="icon">✓</span> Final Sınavı <span class="filename">Final_Exam.docx</span></div>
+</div>
+</div>
+
+<div class="course-section" id="physical">
+<h2>Fiziksel Dosyalar — Ofiste Mevcut</h2>
+<p>Aşağıdaki belgeler basılı kopya olarak ofiste muhafaza edilmektedir ve denetim sırasında yerinde sunulacaktır:</p>
+
+<h3>Tüm Dersler İçin Ortak</h3>
+<div class="doc-list">
+  <div class="doc-item"><span class="icon">📁</span> İmzalı sınav yoklama tutanakları (vize, final, bütünleme)</div>
+  <div class="doc-item"><span class="icon">📁</span> Öğrenci sınav kâğıtları (en yüksek, orta, en düşük puan örnekleri)</div>
+  <div class="doc-item"><span class="icon">📁</span> Resmi not giriş formları (imzalı)</div>
+</div>
+
+<div class="physical-note">
+  Not: Tüm dersler için en yüksek, orta ve en düşük puan örnekleri denetim dosyasında basılı olarak mevcuttur.
+</div>
+</div>
+
+<div style="text-align:center; padding:30px; color:var(--gray); font-size:11px; border-top:1px solid var(--border); margin-top:40px;">
+  <p>Doğu Akdeniz Üniversitesi — Siyaset Bilimi ve Uluslararası İlişkiler Bölümü</p>
+  <p>2024-2025 Akademik Yılı YÖK Denetlemesi — Evrak No: 31522</p>
+  <p>Bu dijital arşiv Prof. Dr. Erol Kaymak tarafından hazırlanmıştır.</p>
+</div>
+
+</div><script>
+document.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('.course-section');
+  const links = document.querySelectorAll('.sidebar a');
+  let current = '';
+  sections.forEach(function(section) {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+  links.forEach(function(link) {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+<script>
+// Internal JSON Mapping: "Clean HTML Name" -> "Messy GitHub Filename"
+const fileData = {
+  "Fall-2024/PSIR-101": {
+    "PSIR101_Autumn_2024-25_Syllabus.pdf": "PSIR101_Spring 2024-25 Autumn Syllabus.pdf",
+    "Attendance_PSIR101_03_Fall2024.xlsx": "AttendancePSIR101032024-25undefined (1).xlsx",
+    "Midterm_GroupA.docx": "101 midterm 2024-25 Autumn Group A.docx",
+    "Midterm_GroupB.docx": "101 midterm 2024-25 Autumn Group B.docx",
+    "Resit_Exam.docx": "Resit draft for PSIR 101.docx",
+    "Grades_PSIR101-03.xlsx": "PSIR101-03_2024-251 Grades.xlsx",
+    "Grades_Optical.xlsx": "psir101finexerolumut.xlsx",
+    "Letter_Grades_Fall2024.pdf": "PSIR 101 letter grades, Fall 2024.pdf",
+    "Resit_Letter_Grades.pdf": "Re-sit 101 Letter Grade Entrance.pdf",
+    "Resit_Attendance.pdf": "XtraSinavProgrami.pdf"
+  },
+  "Fall-2024/PSIR-201": {
+    "PSIR201_Course_Outline_Fall2024.docx": "PSIR 201 course outline, Fall 2024.docx",
+    "Midterm_Exam.docx": "Midterm Exam - PSIR 201.docx",
+    "Midterm_Rubric.pdf": "Midterm rubric.pdf",
+    "Final_Exam.docx": "PSIR 201 Final.docx",
+    "Resit_Exam.docx": "PSIR 201 Resit exam.docx",
+    "Resit_Exam.pdf": "resit.pdf",
+    "Grades_Fall2024.xlsx": "PSIR201 grades^J Fall 2024.xlsx",
+    "Grades_PSIR201-01.xlsx": "PSIR201-01_2024-251 Grades.xlsx",
+    "Letter_Grades_Fall2024.pdf": "PSIR 201 letter grades, Fall 2024.pdf",
+    "Resit_Letter_Grades.pdf": "Re-sit Letter Grade Entrance.pdf",
+    "Resit_Attendance.pdf": "XtraSinavProgrami (1).pdf",
+    "International-Relations-Theory-E-IR.pdf": "International-Relations-Theory-E-IR.pdf",
+    "Sample_Assignment_Rahmanova.docx": "Refugee crisis. Aysel Rahmanova.docx"
+  },
+  "Spring-2025/PSIR-101": {
+    "PSIR101_Spring_2024-25_Syllabus.docx": "PSIR101_Spring 2024-25 Spring Syllabus.docx",
+    "Attendance_PSIR101_02_Spring2025.xlsx": "AttendancePSIR101022024-25undefined (1).xlsx",
+    "Midterm_Exam.docx": "PSIR 101 Midterm Exam Draft.docx",
+    "Grades_PSIR101-02.xls": "PSIR101_02_grades.xls",
+    "Grades_Combined.xls": "PSIR101__grades.xls",
+    "Grades_All_Sections.xlsx": "PSIR101_00_Grades (1).xlsx",
+    "Letter_Grades_Spring2025.pdf": "101 formal Letter Grade Entrance.pdf"
+  },
+  "Spring-2025/PSIR-220": {
+    "PSIR 220 Syllabus.pdf": "PSIR 220 Syllabus.pdf",
+    "INTL 511- Midterm for International Relations Theory.docx": "INTL 511- Midterm for International Relations Theory.docx",
+    "PSIR 220 Final.docx": "PSIR 220 Final.docx",
+    "Attendance_PSIR220_01_Spring2025.xlsx": "Attendance_PSIR220_01_Spring2025.xlsx",
+    "Grades_Spring2025.xlsx": "Grades_Spring2025.xlsx",
+    "Letter_Grades_Spring2025.pdf": "Letter_Grades_Spring2025.pdf"
+  }
+};
+
+const folderMap = {
+  'fall-psir101': 'Fall-2024/PSIR-101',
+  'fall-psir201': 'Fall-2024/PSIR-201',
+  'fall-psir307': 'Fall-2024/PSIR-307',
+  'fall-intl511': 'Fall-2024/INTL-511',
+  'fall-intl601': 'Fall-2024/INTL-601',
+  'spring-psir101': 'Spring-2025/PSIR-101',
+  'spring-psir172': 'Spring-2025/PSIR-172',
+  'spring-psir220': 'Spring-2025/PSIR-220',
+  'spring-psir308': 'Spring-2025/PSIR-308'
+};
+
+document.querySelectorAll('.course-section').forEach(section => {
+  const id = section.id;
+  if (folderMap[id]) {
+    const folderPath = folderMap[id];
+    const fileTranslations = fileData[folderPath] || {};
+    
+    section.querySelectorAll('.filename').forEach(span => {
+      const cleanName = span.textContent.trim();
+      
+      // If the clean name exists in our map, use the messy GitHub name. 
+      // If it doesn't, just use the clean name as the filename.
+      const targetFileName = fileTranslations[cleanName] ? fileTranslations[cleanName] : cleanName;
+      
+      // Create link only if it looks like a file (has an extension)
+      if (targetFileName.includes('.')) {
+        const url = folderPath + '/' + encodeURIComponent(targetFileName);
+        span.innerHTML = `<a href="${url}" target="_blank">${cleanName}</a>`;
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
