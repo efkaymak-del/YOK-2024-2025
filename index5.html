@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024-2025 Akademik Yılı YÖK Denetlemesi — Prof. Dr. Erol Kaymak</title>
+<style>
+:root{--navy:#1a2332;--blue:#2c5282;--light-blue:#ebf4ff;--green:#276749;--light-green:#f0fff4;--gray:#718096;--light-gray:#f7fafc;--border:#e2e8f0;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--light-gray);color:#2d3748;line-height:1.6}
+.sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;background:var(--navy);color:var(--white);overflow-y:auto;padding:20px 0;z-index:100}
+.sidebar .logo{padding:20px;border-bottom:1px solid #2d3748;margin-bottom:15px}
+.sidebar .logo h1{font-size:16px;line-height:1.4}
+.sidebar .logo p{font-size:11px;color:#a0aec0;margin-top:4px}
+.sidebar a{display:block;padding:8px 20px 8px 30px;color:#cbd5e0;text-decoration:none;font-size:13px;transition:all .2s}
+.sidebar a:hover{background:rgba(255,255,255,.1);color:var(--white)}
+.sidebar a.active{background:var(--blue);color:var(--white);border-left:3px solid #63b3ed}
+.sidebar .semester-label{padding:15px 20px 5px;font-size:12px;color:#63b3ed;font-weight:700;text-transform:uppercase}
+.main{margin-left:280px;padding:30px 40px;max-width:1100px}
+.header{background:var(--blue);color:var(--white);padding:30px;border-radius:8px;margin-bottom:30px}
+.header h1{font-size:22px;margin-bottom:5px}
+.header p{font-size:13px;opacity:.85}
+.checklist-table{width:100%;border-collapse:collapse;margin-bottom:40px;background:var(--white);border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.checklist-table th{background:var(--navy);color:var(--white);padding:10px 12px;font-size:11px;text-align:center;text-transform:uppercase;letter-spacing:.5px}
+.checklist-table td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:13px;text-align:center}
+.checklist-table td:first-child{text-align:left;font-weight:600}
+.checklist-table tr:hover{background:var(--light-blue)}
+.check{color:var(--green);font-weight:700}
+.physical{color:var(--blue);font-weight:600}
+.course-section{background:var(--white);border-radius:8px;padding:30px;margin-bottom:30px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.course-section h2{color:var(--navy);font-size:18px;border-bottom:2px solid var(--blue);padding-bottom:8px;margin-bottom:20px}
+.course-section h3{color:var(--blue);font-size:15px;margin:20px 0 10px}
+.course-section h4{color:#4a5568;font-size:13px;margin:15px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 30px;margin-bottom:20px;font-size:13px}
+.info-grid dt{color:var(--gray)}
+.info-grid dd{font-weight:600}
+.doc-list{margin:10px 0 20px}
+.doc-item{display:flex;align-items:center;padding:6px 0;font-size:13px;border-bottom:1px solid var(--light-gray)}
+.doc-item .icon{width:20px;color:var(--green);font-weight:700;margin-right:8px;flex-shrink:0}
+.doc-item a{color:var(--blue);text-decoration:none;margin-left:auto;font-size:11px;font-family:Consolas,monospace;white-space:nowrap}
+.doc-item a:hover{text-decoration:underline}
+.answer-key{background:var(--light-green);border:1px solid #c6f6d5;border-radius:6px;padding:15px 20px;margin:10px 0 20px;font-size:13px}
+.answer-key h4{color:var(--green);margin:0 0 8px;font-size:13px}
+.answer-key table{width:100%;border-collapse:collapse}
+.answer-key td{padding:3px 8px;border-bottom:1px solid #c6f6d5;font-size:12px}
+.answer-key td:first-child{font-weight:600;width:50px}
+.essay-guide{background:#fffff0;border:1px solid #fefcbf;border-radius:6px;padding:15px 20px;margin:10px 0 20px;font-size:13px}
+.essay-guide h4{color:#975a16;margin:0 0 8px;font-size:13px}
+.physical-note{background:var(--light-blue);border:1px solid #bee3f8;border-radius:6px;padding:10px 15px;font-size:12px;color:var(--blue);margin:10px 0}
+.student-sub{background:#faf5ff;border:1px solid #e9d8fd;border-radius:6px;padding:15px 20px;margin:10px 0 20px;font-size:13px}
+.student-sub h4{color:#6b46c1;margin:0 0 8px;font-size:13px}
+@media print{.sidebar{display:none}.main{margin-left:0}.course-section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+<div class="logo">
+<h1>YÖK Denetlemesi<br>2024-2025</h1>
+<p>Prof. Dr. Erol Kaymak<br>Doğu Akdeniz Üniversitesi</p>
+</div>
+<a href="#checklist">Ana Kontrol Tablosu</a>
+<div class="semester-label">Güz 2024-25</div>
+<a href="#fall-psir101">PSIR 101 — Grup 03</a>
+<a href="#fall-psir201">PSIR 201 — Grup 01</a>
+<a href="#fall-psir307">PSIR 307 — Grup 01</a>
+<a href="#fall-intl511">INTL 511 — Grup 01</a>
+<a href="#fall-intl601">INTL 601 — Grup 01</a>
+<div class="semester-label">Bahar 2024-25</div>
+<a href="#spring-psir101">PSIR 101 — Grup 02</a>
+<a href="#spring-psir172">PSIR 172 — Grup 01</a>
+<a href="#spring-psir220">PSIR 220 — Grup 01</a>
+<a href="#spring-psir308">PSIR 308 — Grup 01</a>
+<div class="semester-label">Ek Bilgiler</div>
+<a href="#physical">Fiziksel Dosyalar</a>
+</nav>
+
+<div class="main">
+
+<div class="header">
+<h1>2024-2025 Akademik Yılı YÖK Denetlemesi</h1>
+<p>Prof. Dr. Erol Kaymak — Siyaset Bilimi ve Uluslararası İlişkiler Bölümü — Doğu Akdeniz Üniversitesi</p>
+<p>Evrak Tarih ve Sayı: 25/03/2026 — 31522</p>
+</div>
+
+<!-- ==================== MASTER CHECKLIST ==================== -->
+<div class="course-section" id="checklist">
+<h2>Ana Kontrol Tablosu</h2>
+<table class="checklist-table">
+<thead>
+<tr><th>Ders</th><th>Dönem</th><th>Ders Tasarımı</th><th>Devam Çizelgesi</th><th>Sınav Kâğıtları</th><th>Cevap Anahtarı</th><th>Sınav Yoklama</th><th>Not Çizelgesi</th><th>Harf Notları</th><th>Öğrenci Çalışmaları</th></tr>
+</thead>
+<tbody>
+<tr><td>PSIR 101 (Gr.03)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+<tr><td>PSIR 201 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 307 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+<tr><td>INTL 511 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>INTL 601 (Gr.01)</td><td>Güz</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+<tr><td>PSIR 101 (Gr.02)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+<tr><td>PSIR 172 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+<tr><td>PSIR 220 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+<tr><td>PSIR 308 (Gr.01)</td><td>Bahar</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td><td class="check">✓</td><td class="check">✓</td><td class="physical">Dosyada</td></tr>
+</tbody>
+</table>
+<p style="font-size:12px;color:var(--gray);margin-top:8px;">✓ = Dijital kopya mevcut &nbsp;&nbsp; Dosyada = Basılı kopya denetim dosyasında mevcut</p>
+</div>
+
+<!-- ==================== FALL — PSIR 101 GROUP 03 ==================== -->
+<div class="course-section" id="fall-psir101">
+<h2>PSIR 101 — Introduction to Global Politics (Güz 2024-25, Grup 03)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Diğer Öğretim Üyeleri:</dt><dd>Prof. Dr. Ahmet Sözen, Doç. Dr. Umut Bozkurt</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Öğrenci Sayısı:</dt><dd>33</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Ders Katılım %10, Ödev %10, Tartışma %10</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı (Syllabus) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR101_Spring%202024-25%20Autumn%20Syllabus.pdf" target="_blank">PDF</a> &nbsp; <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR101_Spring%202024-25%20Autumn%20Syllabus.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Sınavı — Grup A <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-101/101%20midterm%202024-25%20Autumn%20Group%20A.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Sınavı — Grup B <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-101/101%20midterm%202024-25%20Autumn%20Group%20B.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Final Sınavı — Grup A & B <span style="color:var(--gray);font-size:11px;margin-left:auto;">Cevap anahtarı ile birlikte aşağıda</span></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/Resit%20draft%20for%20PSIR%20101.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi (Detaylı) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR101-03_2024-251%20Grades.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi (Özet) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR%20101%20Book1.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Optik Okuma Sonuçları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/psir101finexerolumut.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/Re-sit%20101%20Letter%20Grade%20Entrance.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Yoklama <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/XtraSinavProgrami.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Ders Okuması (Cyprus Conflict) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-101/Cyprus%20Conflict%20New%20Tensions%20Eastern%20Mediterranean.pdf" target="_blank">PDF</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı (Grup A)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>6</td><td>c</td><td>11</td><td>b</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>7</td><td>b</td><td>12</td><td>c</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>c</td><td>8</td><td>c</td><td>13</td><td>b</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>a</td><td>9</td><td>b</td><td>14</td><td>b</td><td>19</td><td>c</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>c</td><td>15</td><td>a</td><td>20</td><td>a→1,b→2,c→3,d→4,e→5</td></tr>
+</table>
+<h4>Kompozisyon (3 seçenek, 2 seçilecek × 5 puan = 10 puan)</h4>
+<p><strong>1 — BM'nin Evrimi:</strong> Kuruluş yapısı (1945), Güvenlik Konseyi veto mekanizması, Soğuk Savaş kilitlenmeleri, barış koruma operasyonlarının gelişimi, R2P doktrini, reform tartışmaları.</p>
+<p><strong>2 — Toplumsal Cinsiyet:</strong> Feminist Uİ katkıları, BMGK 1325 Kararı, güvenlik kavramının genişletilmesi, erkeklik normlarının eleştirisi.</p>
+<p><strong>3 — Uluslararası Örgütler:</strong> Kolaylaştırıcı mı yoksa güçlü devlet aracı mı tartışması, liberal kurumsalcılık vs. realizm, NATO, BM, AB örnekleri.</p>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı (Grup B)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>Doğru</td><td>6</td><td>a</td><td>11</td><td>b</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>c</td><td>7</td><td>b</td><td>12</td><td>c</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>Yanlış</td><td>8</td><td>c</td><td>13</td><td>b</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>b</td><td>9</td><td>b</td><td>14</td><td>b</td><td>19</td><td>c</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>c</td><td>15</td><td>a</td><td>20</td><td>Yanlış</td></tr>
+</table>
+<p><em>Kompozisyon soruları Grup A ile aynıdır.</em></p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı (Grup A)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (30 soru × 1 puan = 30 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>7</td><td>b</td><td>13</td><td>c</td><td>19</td><td>c</td><td>25</td><td>c</td></tr>
+<tr><td>2</td><td>b</td><td>8</td><td>c</td><td>14</td><td>b</td><td>20</td><td>c</td><td>26</td><td>b</td></tr>
+<tr><td>3</td><td>c</td><td>9</td><td>b</td><td>15</td><td>b</td><td>21</td><td>b</td><td>27</td><td>c</td></tr>
+<tr><td>4</td><td>c</td><td>10</td><td>c</td><td>16</td><td>b</td><td>22</td><td>b</td><td>28</td><td>c</td></tr>
+<tr><td>5</td><td>c</td><td>11</td><td>b</td><td>17</td><td>b</td><td>23</td><td>b</td><td>29</td><td>d</td></tr>
+<tr><td>6</td><td>c</td><td>12</td><td>c</td><td>18</td><td>b</td><td>24</td><td>b</td><td>30</td><td>c</td></tr>
+</table>
+<h4>Kompozisyon (4 seçenek, 2 seçilecek × 5 puan = 10 puan)</h4>
+<p><strong>1 — İnsan Hakları:</strong> İkinci Dünya Savaşı sonrası gelişim, üç kuşak haklar, ırk ve toplumsal cinsiyet kesişimleri, post-kolonyal eleştiriler.</p>
+<p><strong>2 — Devlet Egemenliği ve Müdahale:</strong> BM Şartı gerilimi, R2P, Güvenlik Konseyi yetkilendirmeleri, Libya 2011, Suriye, Ruanda.</p>
+<p><strong>3 — Çevre Politikaları:</strong> Stockholm'den Paris'e, Ortak Alanların Trajedisi, CBDR, bedavacı sorunu, UNEP/IPCC.</p>
+<p><strong>4 — Kıbrıs Sorunu:</strong> Tarihsel bölünme, Annan Planı, iki toplumlu federasyon, UNFICYP, Türkiye politikası, Doğu Akdeniz enerji siyaseti.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı (Grup B)</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (30 soru × 1 puan = 30 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>7</td><td>b</td><td>13</td><td>c</td><td>19</td><td>c</td><td>25</td><td>c</td></tr>
+<tr><td>2</td><td>b</td><td>8</td><td>b</td><td>14</td><td>d</td><td>20</td><td>c</td><td>26</td><td>b</td></tr>
+<tr><td>3</td><td>b</td><td>9</td><td>b</td><td>15</td><td>c</td><td>21</td><td>c</td><td>27</td><td>c</td></tr>
+<tr><td>4</td><td>c</td><td>10</td><td>c</td><td>16</td><td>b</td><td>22</td><td>b</td><td>28</td><td>c</td></tr>
+<tr><td>5</td><td>c</td><td>11</td><td>c</td><td>17</td><td>b</td><td>23</td><td>c</td><td>29</td><td>b</td></tr>
+<tr><td>6</td><td>b</td><td>12</td><td>c</td><td>18</td><td>c</td><td>24</td><td>b</td><td>30</td><td>b</td></tr>
+</table>
+<p><em>Kompozisyon soruları Grup A ile aynıdır.</em></p>
+</div>
+
+<h3>Bütünleme Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Çoktan Seçmeli (10 soru × 1.5 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>3</td><td>c</td><td>5</td><td>b</td><td>7</td><td>c</td><td>9</td><td>b</td></tr>
+<tr><td>2</td><td>c</td><td>4</td><td>b</td><td>6</td><td>b</td><td>8</td><td>c</td><td>10</td><td>b</td></tr>
+</table>
+<h4>Bölüm B: Kompozisyon (2 soru × 5 puan = 10 puan)</h4>
+<p><strong>1 — Uluslararası Örgütler:</strong> Kolaylaştırıcı vs. güçlü devlet aracı, liberal kurumsalcılık ve realizm perspektifleri.</p>
+<p><strong>2 — Irk ve Toplumsal Cinsiyet:</strong> Küresel siyasette ırk, sömürgecilik mirası, feminist Uİ eleştirileri.</p>
+</div>
+</div>
+
+<!-- ==================== FALL — PSIR 201 GROUP 01 ==================== -->
+<div class="course-section" id="fall-psir201">
+<h2>PSIR 201 — Theory and Practice of International Relations (Güz 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Araştırma Görevlisi:</dt><dd>Vera Petrovna Liubchak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Öğrenci Sayısı:</dt><dd>21</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Katılım %15, Ödev %15</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR%20201%20course%20outline%2C%20Fall%202024.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/Midterm%20Exam%20-%20PSIR%20201.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Değerlendirme Kriterleri <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/Midterm%20rubric.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Final Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR%20201%20Final.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR%20201%20Resit%20exam.docx" target="_blank">DOCX</a> &nbsp; <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/resit.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi (Detaylı) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR201%20grades%5EJ%20Fall%202024.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi (Resmi) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR201-01_2024-251%20Grades.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR%20201%20letter%20grades%2C%20Fall%202024.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/Re-sit%20Letter%20Grade%20Entrance.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Bütünleme Yoklama <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/XtraSinavProgrami%20(1).pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Ders Kitabı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/International-Relations-Theory-E-IR.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Örnek Ödev (Aysel Rahmanova) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/Refugee%20crisis.%20Aysel%20Rahmanova.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Öğrenci Ödevleri (Toplu) <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/PSIR-201/extracted%20assignments" target="_blank">Klasör</a></div>
+<div class="doc-item"><span class="icon">✓</span> Eleştirel Teori Ödevi (Toplu) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-201/PSIR201-01_2024-251-Apply%20Critical%20Theory-28349.zip" target="_blank">ZIP</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Çoktan Seçmeli (15 soru)</h4>
+<table>
+<tr><td>1</td><td>c</td><td>4</td><td>c</td><td>7</td><td>c</td><td>10</td><td>b</td><td>13</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>5</td><td>b</td><td>8</td><td>b</td><td>11</td><td>b</td><td>14</td><td>b</td></tr>
+<tr><td>3</td><td>b</td><td>6</td><td>c</td><td>9</td><td>b</td><td>12</td><td>b</td><td>15</td><td>a</td></tr>
+</table>
+<h4>Bölüm B: Boşluk Doldurma</h4>
+<p>1. Anarchy &nbsp; 2. Uncertainty &nbsp; 3. Anarchy &nbsp; 4. English &nbsp; 5. Anarchy</p>
+<h4>Bölüm C: Doğru/Yanlış</h4>
+<p>1. F &nbsp; 2. T &nbsp; 3. F &nbsp; 4. T &nbsp; 5. F</p>
+<h4>Bölüm D: Eşleştirme</h4>
+<p>Waltz → Structural Realism | Wendt → "Anarchy is what states make of it" | Bull → International Society | Kant → Democratic Peace | Locke → Social Contract</p>
+<h4>Bölüm E: Senaryo/Kompozisyon</h4>
+<p>Argüman netliği, teori kullanımı, güncel örnekler, yazım yapısı değerlendirilir.</p>
+</div>
+
+<h3>Final ve Bütünleme — Cevap Anahtarları</h3>
+<div class="answer-key">
+<p>Final ve bütünleme sınavı dosyalarında cevap anahtarları gömülü olarak mevcuttur. İlgili dosyalar yukarıda bağlantılıdır.</p>
+</div>
+</div>
+
+<!-- ==================== FALL — PSIR 307 GROUP 01 ==================== -->
+<div class="course-section" id="fall-psir307">
+<h2>PSIR 307 — History of Political Thought (Güz 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Katılım %10, Ödev %20</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Kitabı / Okuma Listesi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-307/PoliticalPhilosophyReader.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-307/Midterm%20Exam%20-%20PSIR%20307.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Final Sınavı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-307/PSIR%20307%20Final%20Exam.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-307/PSIR307-01_2024-251%20Grades.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/PSIR-307/PSIR%20307%20letter%20grades%2C%20Fall%202024.pdf" target="_blank">PDF</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p>Klasik siyasi düşünce analiz soruları. Değerlendirme kriterleri: birincil kaynak kullanımı, tarihsel bağlam, kavramsal doğruluk, argüman tutarlılığı.</p>
+<p><strong>Platon:</strong> İdeal devlet, filozof-kral, adalet, mağara alegorisi, formlar teorisi.</p>
+<p><strong>Aristoteles:</strong> Zoon politikon, anayasal yönetim sınıflandırması, erdem etiği, orta sınıf yönetimi.</p>
+<p><strong>Machiavelli:</strong> Virtù ve fortuna, ahlak-siyaset ayrımı, cumhuriyetçilik, Prens vs. Söylevler.</p>
+<p><strong>Hobbes:</strong> Doğa durumu, toplumsal sözleşme, Leviathan, egemenlik, güvenlik ikilemi.</p>
+<p><strong>Locke:</strong> Doğal haklar, rıza temelli yönetim, devrime hak, sınırlı devlet.</p>
+<p><strong>Rousseau:</strong> Genel irade, toplumsal sözleşme, doğal vs. sivil özgürlük, eşitsizlik eleştirisi.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p>Modern siyasi düşüncenin evrimi. Vize kriterlerine ek olarak düşünürler arası karşılaştırma ve günümüze bağlama yeteneği aranır.</p>
+<p><strong>Burke:</strong> Gelenek ve muhafazakârlık, Fransız Devrimi eleştirisi, organik toplum.</p>
+<p><strong>Mill:</strong> Bireysel özgürlük, zarar ilkesi, faydacılık, ifade özgürlüğü, temsili demokrasi.</p>
+<p><strong>Marx:</strong> Tarihsel materyalizm, sınıf mücadelesi, artı-değer, yabancılaşma, alt-üst yapı.</p>
+<p><strong>Wollstonecraft:</strong> Kadın hakları, eğitim eşitliği, akıl temelli eşitlik argümanı.</p>
+</div>
+</div>
+
+<!-- ==================== FALL — INTL 511 GROUP 01 ==================== -->
+<div class="course-section" id="fall-intl511">
+<h2>INTL 511 — International Relations Theory (Güz 2024-25, Grup 01, Yüksek Lisans)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Düzey:</dt><dd>Yüksek Lisans (MA)</dd>
+<dt>Değerlendirme:</dt><dd>Tepki Yazıları %20, Vize %20, Final %20, Araştırma Makalesi %20, Katılım %20</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/INTL%20511%20syllabus%2C%20Fall%202024.pdf" target="_blank">PDF</a> &nbsp; <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/INTL%20511%20syllabus%2C%20Fall%202024.doc" target="_blank">DOC</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/INTL511-01_2024-251%20Grades.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/INTL%20511%20letter%20grades%2C%20Fall%202024.pdf" target="_blank">PDF</a></div>
+</div>
+
+<h4>Öğrenci Vize Sınavı Kâğıtları</h4>
+<div class="student-sub">
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📄</span> Alaa Almasri <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Midterm/Alaa%20Almasri%20Midterms%20INTL%20511.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ali Goldasteh <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Midterm/Ali%20Goldasteh%20-%20midterm%20INTL%20511.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">📄</span> Fatou Bojang <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Midterm/Fatou%20Bojang%20-%20Midterm%20Exams%20INTL%20511.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ibrahim Kurt <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Midterm/Ibrahim%20Kurt%20-%20INTL%20511%20midterm%20exam.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ümit Karakoç <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Midterm/Umit%20Karakoc%20-%20INTL511-Midterm..pdf" target="_blank">PDF</a></div>
+</div>
+</div>
+
+<h4>Öğrenci Final Sınavı Kâğıtları</h4>
+<div class="student-sub">
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📄</span> Alaa Almasri <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Final/ALAA%20ALMASRI_87224_assignsubmission_file/Alaa%20International%20Relations%20Theory%20Final%20Examination.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ali Goldasteh <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Final/ALI%20GOLDASTEH_87228_assignsubmission_file/Alis%20Final%20Exam.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">📄</span> Fatou Bojang <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Final/FATOU%20BOJANG_87227_assignsubmission_file/Fatou%20IR%20FINAL.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> İbrahim Kurt <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Final/İBRAHİM%20KURT_87226_assignsubmission_file/Ibrahim%20Kurt%20INTL511%20International%20Relations%20Theory%20Final%20Examination.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ümit Karakoç <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-511/Final/ÜMİT%20KARAKOÇ_87223_assignsubmission_file/Umit%20Final-Intl511.docx" target="_blank">DOCX</a></div>
+</div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Kavram Tanımlama (7 × 5 = 35 puan)</h4>
+<p><strong>1. Yapısal vs. Klasik Realizm:</strong> Waltz'un sistem düzeyi; Morgenthau'nun insan doğası odağı. Birim düzeyi değişkenler paranteze alınır vs. devlet adamlarının algıları.</p>
+<p><strong>2. Göreli vs. Mutlak Kazanç:</strong> Realistlerde diğer tarafın kazancı; liberallerde toplam kazanç. İşbirliği imkânları üzerinde doğrudan etkili.</p>
+<p><strong>3. Açıklayıcı vs. Kurucu Teori:</strong> Pozitivist nedensellik vs. normlar ve söylem tarafından inşa. Wendt, Onuf.</p>
+<p><strong>4. Cox — Sorun-Çözücü vs. Eleştirel:</strong> Mevcut yapıyı kabul et vs. yapıyı sorgula. "Teori her zaman birileri için ve bir amaç içindir."</p>
+<p><strong>5. Karmaşık Karşılıklı Bağımlılık:</strong> Keohane ve Nye; çoklu kanallar, askeri gücün azalan önceliği, gündem hiyerarşisi yokluğu.</p>
+<p><strong>6. Marksist Hegemonya:</strong> Gramsci'nin rıza ve zor birleşimi; Cox'un uluslararası uyarlaması. Maddi kapasite, kurumlar, fikirler.</p>
+<p><strong>7. İngiliz Okulu — Egemenlik ve R2P:</strong> Pluralist vs. solidarist tartışma; Bull'un anarşik toplumu.</p>
+<h4>Bölüm B: Analitik Karşılaştırma (35 puan)</h4>
+<p>Neoliberal kurumsalcılık veya eleştirel teori. Birincil kaynak kullanımı, karşıt argüman değerlendirmesi beklenir.</p>
+<h4>Bölüm C: Yansıtıcı Değerlendirme (30 puan)</h4>
+<p>Teorik pozisyon geliştirme, birincil metinlerle diyalog.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Kavram Tanımlama (7 × 5 = 35 puan)</h4>
+<p><strong>1. Post-yapısalcılık:</strong> Söylem analizi, iktidar/bilgi (Foucault), kimlik inşası, temsil politikaları.</p>
+<p><strong>2. Uluslararası Toplum vs. Sistem:</strong> Mekanik etkileşim vs. paylaşılan normlar. Bull, Wight, Watson.</p>
+<p><strong>3. Feminist Uİ:</strong> Toplumsal cinsiyet analizi, Enloe, güvenlik kavramının genişletilmesi, marjinalleştirilmiş sesler.</p>
+<p><strong>4. Post-kolonyalizm:</strong> Avrupa-merkezci eleştiri, Said, Spivak, bilgi üretiminde asimetri.</p>
+<p><strong>5. Güvenlikleştirme:</strong> Kopenhag Okulu, söz edim, olağanüstü tedbirler, sektörel güvenlik.</p>
+<p><strong>6. Yeşil Teori:</strong> Ekolojik güvenlik, küresel ortak alanlar, iklim adaleti, nesiller arası adalet.</p>
+<p><strong>7. Çin İlişkiselcilik:</strong> Qin Yaqing, guanxi, süreç odaklı dünya görüşü.</p>
+<h4>Bölüm B ve C</h4>
+<p>MA düzeyinde birincil metin kullanımı, karşılaştırmalı derinlik, özgün yorum beklenir.</p>
+</div>
+</div>
+
+<!-- ==================== FALL — INTL 601 GROUP 01 ==================== -->
+<div class="course-section" id="fall-intl601">
+<h2>INTL 601 — Advanced International Relations Theory (Güz 2024-25, Grup 01, Doktora)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Düzey:</dt><dd>Doktora (PhD)</dd>
+<dt>Değerlendirme:</dt><dd>Vize %20, Final %20, Araştırma Makalesi %30, Tepki Yazıları %15, Katılım %15</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/INTL%20601%20syllabus%2C%20Fall%202024.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Not Çizelgesi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/INTL601-01_2024-251%20Grades.xlsx" target="_blank">XLSX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Harf Notları <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/INTL%20601%20letter%20grades%2C%20Fall%202024.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Değerlendirme Kriterleri <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Midterm/Midterm%20rubric.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Tepki Yazısı Kriterleri <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Reaction%20Paper%20Rubric%20conv%20PDF.pdf" target="_blank">PDF</a></div>
+<div class="doc-item"><span class="icon">✓</span> Ders Kitabı (50 Key Thinkers) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Fifty%20key%20thinkers%20IR%202nd%20ed%20conv.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Ders Kitabı (IR Theory for 21st Century) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/International%20relations%20theory%20for%2021st%20century%20conv.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">✓</span> Ek Okuma (Postcolonialism) <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Postcolonialism%20in%20International%20Relations%20Theory_.pdf" target="_blank">PDF</a></div>
+</div>
+
+<h4>Öğrenci Vize Sınavı Kâğıtları</h4>
+<div class="student-sub">
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📄</span> Faezeh Ghasemi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Midterm/Faezeh%20Midterm%20Exam-%20IR%20theories-%202024-%20Faezeh%20Ghasemi.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Hatice Savoğlu <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Midterm/Hatice%20International%20Relations%20Theory%20Exam.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ismayil Nuriyev <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Midterm/Ismayil_Nuriyev_24600252%20(Midterm).docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Layan Alzanbarkji <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Midterm/Layan%20Midterm%2024600276.pdf" target="_blank">PDF</a></div>
+</div>
+</div>
+
+<h4>Öğrenci Final Sınavı Kâğıtları</h4>
+<div class="student-sub">
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📄</span> Faezeh Ghasemi <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Final/FAEZEH%20GHASEMI_87452_assignsubmission_file/Faezeh%20final%20Exam-%20Faezeh%20Ghasemi-24600118.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Hatice Savoğlu <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Final/HATİCE%20SAVOĞLU_87449_assignsubmission_file/Hatice%20Final%20Exam.docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Ismayil Nuriyev <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Final/ISMAYIL%20NURIYEV_87451_assignsubmission_file/Ismayil_Nuriyev_24600252%20(Final%20Exam).docx" target="_blank">DOCX</a></div>
+<div class="doc-item"><span class="icon">📄</span> Layan Alzanbarkji <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/INTL-601/Final/LAYAN%20ALZANBARKJI_87450_assignsubmission_file/Layan%2024600276.pdf" target="_blank">PDF</a></div>
+</div>
+</div>
+
+<h4>Öğrenci Tepki Yazıları (Örnek — Hafta 5 ve 6)</h4>
+<div class="student-sub">
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📄</span> Tepki Yazısı 5 — Tüm Öğrenciler <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/INTL-601/Reaction%20paper%205" target="_blank">Klasör</a></div>
+<div class="doc-item"><span class="icon">📄</span> Tepki Yazısı 6 — Tüm Öğrenciler <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/INTL-601/Reaction%20paper%206" target="_blank">Klasör</a></div>
+</div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: Metateoretik Kavram Analizi (7 × 5 = 35 puan)</h4>
+<p><strong>1. Materyalizm vs. İdealizm:</strong> Waltz, Gilpin vs. Wendt, Kratochwil; maddi yapılar mı normlar mı; yapı-fail ilişkisi.</p>
+<p><strong>2. Pozitivizm vs. Post-pozitivizm:</strong> Bilgi üretimi koşulları; Üçüncü Büyük Tartışma; yöntemsel çoğulculuk.</p>
+<p><strong>3. Lakatos ve Uİ:</strong> Sert çekirdek, koruyucu kuşak; ilerici vs. dejenere programlar; paradigma tartışmaları.</p>
+<p><strong>4. Yapı-Fail Sorunu:</strong> Wendt'in yapılaşması, Archer'ın morfolojik döngüsü, Dessler'in dönüşümcü modeli.</p>
+<p><strong>5. Normatif Teori:</strong> Kozmopolitanizm vs. komünitaryanizm; Rawls, Beitz, Pogge; müdahale etiği.</p>
+<p><strong>6. Bilim Felsefesi:</strong> Popper, kuramsal yüklü gözlem, süreç takibi, karşıolgusal analiz.</p>
+<p><strong>7. Eklektisizm:</strong> Katzenstein ve Sil; paradigma ötesi; problem-odaklı araştırma.</p>
+<h4>Bölüm B (35 puan) ve C (30 puan)</h4>
+<p>Doktora düzeyi: özgün metateoretik konum, birincil metinlerle derin diyalog, araştırma programına katkı.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Bölüm A: İleri Kavram Analizi (7 × 5 = 35 puan)</h4>
+<p><strong>1. Pratik Dönüşü:</strong> Bourdieu, Adler ve Pouliot, diplomasi pratiği, süreç ontolojisi.</p>
+<p><strong>2. Küresel Güney:</strong> Acharya, Tickner, yerli epistemolojiler, Bandung geleneği.</p>
+<p><strong>3. Assemblage Teorisi:</strong> Deleuze, DeLanda, ağ ontolojisi, karmaşık uyarlanır sistemler.</p>
+<p><strong>4. Tarihsel Sosyoloji:</strong> Tilly, Mann, Hobson; devlet oluşumu ve savaş; longue durée.</p>
+<p><strong>5. Duygular ve Uİ:</strong> Duygulanım teorisi, ontolojik güvenlik, kolektif hafıza.</p>
+<p><strong>6. Zamansallık:</strong> Doğrusal vs. döngüsel zaman, aciliyet politikaları, iklim zamansallığı.</p>
+<p><strong>7. Teknoloji ve Uİ:</strong> Yapay zekâ, siber güvenlik, algoritmik yönetişim, gözetim.</p>
+<h4>Bölüm B (35 puan) ve C (30 puan)</h4>
+<p>Doktora düzeyi: orijinal analiz, birincil kaynaklarla sürekli diyalog, metateoretik gerekçelendirme.</p>
+</div>
+</div>
+
+<!-- ==================== SPRING — PSIR 101 GROUP 02 ==================== -->
+<div class="course-section" id="spring-psir101">
+<h2>PSIR 101 — Introduction to Global Politics (Bahar 2024-25, Grup 02)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Diğer Öğretim Üyeleri:</dt><dd>Doç. Dr. Umut Bozkurt, Dr. Öğr. Üyesi Aylin Gürzel Aka</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Öğrenci Sayısı:</dt><dd>38</dd>
+<dt>Değerlendirme:</dt><dd>Vize %35, Final %40, Ders Katılım %5, Ödev %10, Tartışma %10</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/Spring-2025/PSIR-101" target="_blank">Klasör</a></div>
+<div class="doc-item"><span class="icon">✓</span> Vize Sınavı <span style="color:var(--gray);font-size:11px;margin-left:auto;">Cevap anahtarı ile birlikte aşağıda</span></div>
+<div class="doc-item"><span class="icon">✓</span> Final Sınavı <span style="color:var(--gray);font-size:11px;margin-left:auto;">Cevap anahtarı ile birlikte aşağıda</span></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 0.75 puan = 15 puan)</h4>
+<table>
+<tr><td>1</td><td>c</td><td>6</td><td>b</td><td>11</td><td>c</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>7</td><td>c</td><td>12</td><td>b</td><td>17</td><td>c</td></tr>
+<tr><td>3</td><td>b</td><td>8</td><td>b</td><td>13</td><td>c</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>c</td><td>9</td><td>c</td><td>14</td><td>b</td><td>19</td><td>b</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>b</td><td>15</td><td>b</td><td>20</td><td>c</td></tr>
+</table>
+<h4>Kompozisyon (4 seçenek, 2 seçilecek × 5 puan = 20 puan)</h4>
+<p><strong>1 — Küreselleşme:</strong> Boyutlar, hiper-küreselleşmeciler vs. şüpheciler, küresel yönetişim.</p>
+<p><strong>2 — Uluslararası Örgütler:</strong> BM, NATO, AB; kolaylaştırıcı vs. araç tartışması.</p>
+<p><strong>3 — Toplumsal Cinsiyet:</strong> Feminist Uİ, BMGK 1325, güvenlik genişletilmesi.</p>
+<p><strong>4 — Realizm ve Liberalizm:</strong> Karşılaştırmalı analiz, anarşi, işbirliği, kurumsal etki.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (20 soru × 1 puan = 20 puan)</h4>
+<table>
+<tr><td>1</td><td>b</td><td>6</td><td>b</td><td>11</td><td>b</td><td>16</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>7</td><td>b</td><td>12</td><td>b</td><td>17</td><td>b</td></tr>
+<tr><td>3</td><td>b</td><td>8</td><td>c</td><td>13</td><td>b</td><td>18</td><td>b</td></tr>
+<tr><td>4</td><td>d</td><td>9</td><td>b</td><td>14</td><td>c</td><td>19</td><td>b</td></tr>
+<tr><td>5</td><td>b</td><td>10</td><td>c</td><td>15</td><td>b</td><td>20</td><td>b</td></tr>
+</table>
+<h4>Kompozisyon (4 seçenek, 2 seçilecek × 10 puan = 20 puan)</h4>
+<p><strong>1 — İnsan Hakları:</strong> Üç kuşak, evrenselcilik vs. kültürel görecelik, BM mekanizmaları.</p>
+<p><strong>2 — Devlet Egemenliği:</strong> Westphalia düzeni, R2P, insani müdahale.</p>
+<p><strong>3 — Çevre Politikaları:</strong> İklim değişikliği, Paris Anlaşması, CBDR.</p>
+<p><strong>4 — Kıbrıs:</strong> Tarihsel arka plan, çözüm girişimleri, Doğu Akdeniz enerji siyaseti.</p>
+</div>
+</div>
+
+<!-- ==================== SPRING — PSIR 172 GROUP 01 ==================== -->
+<div class="course-section" id="spring-psir172">
+<h2>PSIR 172 — Applied Skills in Political Science (Bahar 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Katılım %10, Ödev %20</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı, Sınavlar, Notlar <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/Spring-2025/PSIR-172" target="_blank">Klasör</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p><strong>Akademik Yazım:</strong> Tez cümlesi, paragraf yapısı, akademik dil, APA/Harvard atıf, intihal farkındalığı.</p>
+<p><strong>Kaynak Değerlendirme:</strong> Birincil/ikincil kaynak ayrımı, akademik dergi vs. popüler medya, güvenilirlik kriterleri.</p>
+<p><strong>Argüman Analizi:</strong> Öncül/sonuç belirleme, mantıksal safsatalar, karşıt argüman, kanıt kullanımı.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p><strong>Araştırma Tasarımı Temelleri:</strong> Araştırma sorusu formülasyonu, literatür taraması, nitel vs. nicel, veri toplama.</p>
+<p><strong>Sunum Becerileri:</strong> Akademik poster, sözlü sunum, görsel materyal, izleyici etkileşimi.</p>
+<p><strong>Eleştirel Düşünme:</strong> Varsayımların sorgulanması, alternatif açıklamalar, normatif vs. pozitif analiz.</p>
+</div>
+</div>
+
+<!-- ==================== SPRING — PSIR 220 GROUP 01 ==================== -->
+<div class="course-section" id="spring-psir220">
+<h2>PSIR 220 — Research Design (Bahar 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Araştırma Önerisi %20, Katılım %10</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Quiz Örneği <a href="https://github.com/efkaymak-del/YOK-2024-2025/blob/main/quiz.docx" target="_blank">DOCX</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<h4>Çoktan Seçmeli (10 soru × 2 puan = 20 puan)</h4>
+<table>
+<tr><td>1</td><td>c</td><td>3</td><td>b</td><td>5</td><td>a</td><td>7</td><td>c</td><td>9</td><td>b</td></tr>
+<tr><td>2</td><td>b</td><td>4</td><td>a</td><td>6</td><td>c</td><td>8</td><td>b</td><td>10</td><td>c</td></tr>
+</table>
+<h4>Kısa Cevap</h4>
+<p><strong>Araştırma Sorusu Düzeltme:</strong> Geniş soruların daraltılması, ölçülebilirlik, teorik bağlam.</p>
+<p><strong>Literatür Taraması:</strong> Sistematik tarama, tema bazlı organizasyon, araştırma boşluğu.</p>
+<p><strong>Hipotez Formülasyonu:</strong> Yanlışlanabilirlik, bağımlı/bağımsız değişken, nedensellik, kontrol değişkenleri.</p>
+<p><strong>Model İnşası:</strong> Bağımsız → aracı → bağımlı değişken, operasyonalizasyon, ölçüm geçerliliği.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p><strong>Nitel Yöntemler:</strong> Vaka çalışması, süreç takibi, yarı-yapılandırılmış mülakat, içerik analizi.</p>
+<p><strong>Nicel Yöntemler:</strong> Anket tasarımı, örnekleme, korelasyon/regresyon, iç/dış geçerlilik.</p>
+<p><strong>Karışık Yöntemler:</strong> Yakınsak, sıralı tasarımlar; triangülasyon; pragmatist temel.</p>
+<p><strong>Araştırma Etiği:</strong> Bilgilendirilmiş rıza, gizlilik, etik kurul, hassas konularda araştırma.</p>
+<p><strong>Araştırma Önerisi:</strong> Giriş, literatür, teorik çerçeve, yöntem, beklenen katkılar, kaynakça.</p>
+</div>
+</div>
+
+<!-- ==================== SPRING — PSIR 308 GROUP 01 ==================== -->
+<div class="course-section" id="spring-psir308">
+<h2>PSIR 308 — Contemporary Political Thought (Bahar 2024-25, Grup 01)</h2>
+<dl class="info-grid">
+<dt>Öğretim Üyesi:</dt><dd>Prof. Dr. Erol Kaymak</dd>
+<dt>Kredi / AKTS:</dt><dd>3 / 6</dd>
+<dt>Değerlendirme:</dt><dd>Vize %30, Final %40, Katılım %10, Ödev %20</dd>
+</dl>
+
+<h3>Dosyalar</h3>
+<div class="doc-list">
+<div class="doc-item"><span class="icon">✓</span> Ders Tasarımı, Sınavlar, Notlar <a href="https://github.com/efkaymak-del/YOK-2024-2025/tree/main/Spring-2025/PSIR-308" target="_blank">Klasör</a></div>
+</div>
+
+<h3>Vize Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p>Çağdaş siyasi düşünce analizi. Birincil metin kullanımı, kavramsal derinlik, düşünürler arası bağlantı, güncel uygulama.</p>
+<p><strong>Rawls:</strong> Orijinal pozisyon, cehalet örtüsü, iki adalet ilkesi, fark ilkesi, siyasal liberalizm, örtüşen uzlaşma.</p>
+<p><strong>Nozick:</strong> Haklar temelli libertaryanizm, asgari devlet, edinim/transfer adaleti, Wilt Chamberlain argümanı.</p>
+<p><strong>Habermas:</strong> Kamusal alan, müzakereci demokrasi, iletişimsel eylem, söylem etiği.</p>
+<p><strong>Foucault:</strong> İktidar/bilgi, söylem, biyopolitika, yönetimsellik, disipliner toplum.</p>
+<p><strong>Arendt:</strong> Kamusal alan, eylem, çoğulculuk, kötülüğün sıradanlığı, totalitarizm.</p>
+</div>
+
+<h3>Final Sınavı — Cevap Anahtarı</h3>
+<div class="answer-key">
+<p><strong>Derrida:</strong> Yapısöküm, différance, konukseverlik, gelen demokrasi.</p>
+<p><strong>Said:</strong> Oryantalizm, temsil politikaları, bilgi/iktidar, entelektüelin rolü.</p>
+<p><strong>Butler:</strong> Performatif toplumsal cinsiyet, yas tutulabilirlik, prekarite.</p>
+<p><strong>Žižek:</strong> İdeoloji eleştirisi, Lacan ve siyaset, post-politik durum.</p>
+<p><strong>Mouffe:</strong> Agonistik demokrasi, siyasal olan, düşman vs. rakip, sol popülizm.</p>
+<p><strong>Agamben:</strong> İstisna hali, çıplak yaşam (homo sacer), biyopolitika, kamplar.</p>
+<p><strong>Sen:</strong> Yapabilirlik yaklaşımı, özgürlük olarak kalkınma, kamusal akıl, karşılaştırmalı adalet.</p>
+</div>
+</div>
+
+<!-- ==================== PHYSICAL FILES ==================== -->
+<div class="course-section" id="physical">
+<h2>Fiziksel Dosyalar — Ofiste Mevcut</h2>
+<p>Aşağıdaki belgeler basılı kopya olarak ofiste muhafaza edilmektedir ve denetim sırasında yerinde sunulacaktır:</p>
+
+<div class="doc-list">
+<div class="doc-item"><span class="icon">📁</span> İmzalı sınav yoklama tutanakları — tüm dersler (vize, final, bütünleme)</div>
+<div class="doc-item"><span class="icon">📁</span> Devam takip çizelgeleri — basılı imzalı kopyalar</div>
+<div class="doc-item"><span class="icon">📁</span> Öğrenci sınav kâğıtları — en yüksek, orta ve en düşük puan örnekleri</div>
+<div class="doc-item"><span class="icon">📁</span> Resmi not giriş formları — imzalı</div>
+</div>
+
+<h3>Dijitalleştirme İçin Seçilmiş Öğrenci Örnekleri</h3>
+<div class="answer-key">
+<h4>PSIR 101 — Güz 2024 (Grup 03, 33 öğrenci)</h4>
+<p><strong>En Yüksek:</strong> Orhan Al-Emdar — Vize: 27/35, Final: 36/40</p>
+<p><strong>Orta:</strong> Iskander Pulatov — Vize: 17/35, Final: 24.5/40</p>
+<p><strong>En Düşük:</strong> Mohamed Taha — Vize: 3/35</p>
+
+<h4>PSIR 201 — Güz 2024 (Grup 01, 21 öğrenci)</h4>
+<p><strong>En Yüksek:</strong> Safar Yusuf — Genel: 96.6</p>
+<p><strong>Orta:</strong> Ege Tezel — Genel: ~63</p>
+<p><strong>En Düşük:</strong> Berkcan Kayım — Genel: 20.25</p>
+
+<h4>PSIR 101 — Bahar 2025 (Grup 02, 38 öğrenci)</h4>
+<p><strong>En Yüksek:</strong> Jessie Pancholi — Vize: 34/35, Final: 37/40</p>
+<p><strong>Orta:</strong> Mustafa — Vize: 19.5/35, Final: 18/40</p>
+<p><strong>En Düşük:</strong> Muhammet — Vize: 7/35</p>
+</div>
+
+<div class="physical-note">
+Diğer dersler (PSIR 307, INTL 511, INTL 601, PSIR 172, PSIR 220, PSIR 308) için öğrenci sınav kâğıdı örnekleri denetim dosyasında basılı olarak mevcuttur. INTL 511 ve INTL 601 için dijital öğrenci çalışmaları yukarıdaki ilgili bölümlerde bağlantılıdır.
+</div>
+</div>
+
+<!-- Footer -->
+<div style="text-align:center;padding:30px;color:var(--gray);font-size:11px;border-top:1px solid var(--border);margin-top:40px;">
+<p>Doğu Akdeniz Üniversitesi — Siyaset Bilimi ve Uluslararası İlişkiler Bölümü</p>
+<p>2024-2025 Akademik Yılı YÖK Denetlemesi — Evrak No: 31522</p>
+<p>Bu dijital arşiv Prof. Dr. Erol Kaymak tarafından hazırlanmıştır.</p>
+</div>
+
+</div>
+
+<script>
+document.addEventListener('scroll',function(){var s=document.querySelectorAll('.course-section'),l=document.querySelectorAll('.sidebar a'),c='';s.forEach(function(e){if(window.scrollY>=e.offsetTop-100)c=e.getAttribute('id')});l.forEach(function(a){a.classList.remove('active');if(a.getAttribute('href')==='#'+c)a.classList.add('active')})});
+</script>
+</body>
+</html>
